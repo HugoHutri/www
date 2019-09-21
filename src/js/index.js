@@ -1,8 +1,8 @@
 import "../css/styles.css";
 
 let player = 1;
-const x = "x"; //"🗙";
-const o = "o"; //"🞇";
+const x = "🗙";
+const o = "🞇";
 let pause = false;
 let winline = [];
 var downloadTimer;
@@ -14,10 +14,10 @@ function createGrid(grid) {
   for (let i = 0; i < n; i++) {
     let row = document.createElement("div");
     grid.appendChild(row);
-    row.className = "row grid-row center-align";
+    row.className = "row grid-row";
     for (let j = 0; j < n; j++) {
       let col = document.createElement("div");
-      col.className = "col card-panel grid-col center-align";
+      col.className = "col card-panel grid-col";
       row.appendChild(col);
       createCol(col);
     }

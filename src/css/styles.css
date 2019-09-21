@@ -1,32 +1,21 @@
 body {
   font-family: sans-serif;
 }
-th,
-td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  height: 60px;
-  width: 60px;
-  text-align: center;
-  font-family: Helvetica;
-  font-size: 30px;
-  background-color: white;
-}
+
 .grid-col {
   height: 60px;
   width: 60px;
-  text-align: center;
   font-family: Helvetica;
   font-size: 30px;
-  margin-bottom: 0px;
-  margin-top: 0px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  align-items: center;
 }
 .grid-row {
   display: flex;
   justify-content: center;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 0px;
 }
 
@@ -35,38 +24,4 @@ td {
 }
 .o {
   background-color: rgba(250, 128, 114, 1);
-}
-.progressbar {
-  width: 80%;
-  margin: 50px auto;
-  border: solid 1px #000;
-}
-.progressbar .inner {
-  height: 20px;
-  animation: progressbar-countdown;
-  /* Placeholder, this will be updated using javascript */
-  animation-duration: 10s;
-  /* We stop in the end */
-  animation-iteration-count: 1;
-  /* Stay on pause when the animation is finished finished */
-  animation-fill-mode: forwards;
-  /* We start paused, we start the animation using javascript */
-  animation-play-state: paused;
-  /* We want a linear animation, ease-out is standard */
-  animation-timing-function: linear;
-}
-@keyframes progressbar-countdown {
-  0% {
-    width: 100%;
-    background: #0f0;
-  }
-  100% {
-    width: 0%;
-    background: #f00;
-  }
-}
-#board {
-  border: 1px solid black;
-  border-collapse: collapse;
-  background-color: #000000;
 }
