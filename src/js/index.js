@@ -17,7 +17,7 @@ function createGrid(grid) {
     row.className = "row grid-row";
     for (let j = 0; j < n; j++) {
       let col = document.createElement("div");
-      col.className = "col card-panel grid-col";
+      col.className = "col card-panel grid-col hoverable center-align";
       row.appendChild(col);
       createCol(col);
     }
@@ -32,11 +32,12 @@ function createCol(col) {
 }
 
 function start_countdown() {
+  let bar = document.getElementById("bar");
   var reverse_counter = 100;
   downloadTimer = setInterval(function() {
     if (pause) return;
-    document.getElementById("innerbar").style.width =
-      parseInt(100 - --reverse_counter, 10) + "%";
+    let innerbar = document.getElementById("innerbar");
+    innerbar.style.width = parseInt(100 - --reverse_counter, 10) + "%";
     if (reverse_counter <= 0) {
       reverse_counter = 100;
       console.log("100");
@@ -60,11 +61,11 @@ function move(tableCell) {
   //expandTheGrid(tableCell);
   if (player === 2) {
     // Player O or Player 2
-    tableCell.classList += " red lighten-3";
+    tableCell.classList += " red lighten-2";
     tableCell.innerHTML = o;
   } else if (player === 1) {
     // Player X or Player 1
-    tableCell.classList += " green lighten-3";
+    tableCell.classList += " green lighten-2";
     tableCell.innerHTML = x;
   }
   //tableCell.setAttribute("class", player === 1 ? "x" : "o");
